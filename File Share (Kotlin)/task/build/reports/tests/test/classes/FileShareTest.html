@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">21.511s</div>
+<div class="counter">22.613s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">start</td>
-<td class="success">21.511s</td>
+<td class="success">22.613s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -98,83 +98,109 @@ Start test 1?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v3.0.2)
 ?[0m?[0;34m
-?[0m?[0;34m2024-05-21T19:24:42.962+05:00  INFO 8268 --- [    Test worker] fileshare.ApplicationKt                  : Starting ApplicationKt using Java 17.0.5 with PID 8268 (started by User in D:\JetBrainsWork\File Share (Kotlin)\File Share (Kotlin)\task)
-?[0m?[0;34m2024-05-21T19:24:42.966+05:00  INFO 8268 --- [    Test worker] fileshare.ApplicationKt                  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-?[0m?[0;34m2024-05-21T19:24:44.573+05:00  INFO 8268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2024-05-21T19:24:44.656+05:00  INFO 8268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 68 ms. Found 1 JPA repository interfaces.
-?[0m?[0;34m2024-05-21T19:24:45.505+05:00  INFO 8268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-?[0m?[0;34m2024-05-21T19:24:45.522+05:00  INFO 8268 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2024-05-21T19:24:45.523+05:00  INFO 8268 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-?[0m?[0;34m2024-05-21T19:24:45.646+05:00  INFO 8268 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2024-05-21T19:24:45.650+05:00  INFO 8268 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2594 ms
-?[0m?[0;34m2024-05-21T19:24:46.030+05:00  INFO 8268 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2024-05-21T19:24:46.116+05:00  INFO 8268 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
-?[0m?[0;34m2024-05-21T19:24:46.408+05:00  WARN 8268 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-?[0m?[0;34m2024-05-21T19:24:46.594+05:00  INFO 8268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-?[0m?[0;34m2024-05-21T19:24:46.893+05:00  INFO 8268 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:../fileshare_db user=SA
-?[0m?[0;34m2024-05-21T19:24:46.897+05:00  INFO 8268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-?[0m?[0;34m2024-05-21T19:24:46.949+05:00  INFO 8268 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-?[0m?[0;34m2024-05-21T19:24:47.758+05:00  INFO 8268 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-?[0m?[0;34m2024-05-21T19:24:47.770+05:00  INFO 8268 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2024-05-21T19:24:48.896+05:00  WARN 8268 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2024-05-21T19:24:49.702+05:00  INFO 8268 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2024-05-21T19:24:49.805+05:00  INFO 8268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-?[0m?[0;34m2024-05-21T19:24:49.825+05:00  INFO 8268 --- [    Test worker] fileshare.ApplicationKt                  : Started ApplicationKt in 7.506 seconds (process running for 8.627)
-?[0;34m2024-05-21T19:24:50.268+05:00  INFO 8268 --- [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2024-05-21T19:24:50.268+05:00  INFO 8268 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2024-05-21T19:24:50.271+05:00  INFO 8268 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+?[0m?[0;34m2024-05-21T21:15:11.854+05:00  INFO 10212 --- [    Test worker] fileshare.ApplicationKt                  : Starting ApplicationKt using Java 17.0.5 with PID 10212 (started by User in D:\JetBrainsWork\File Share (Kotlin)\File Share (Kotlin)\task)
+?[0m?[0;34m2024-05-21T21:15:11.859+05:00  INFO 10212 --- [    Test worker] fileshare.ApplicationKt                  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+?[0m?[0;34m2024-05-21T21:15:13.462+05:00  INFO 10212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2024-05-21T21:15:13.551+05:00  INFO 10212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2024-05-21T21:15:14.393+05:00  INFO 10212 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+?[0m?[0;34m2024-05-21T21:15:14.411+05:00  INFO 10212 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2024-05-21T21:15:14.412+05:00  INFO 10212 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+?[0m?[0;34m2024-05-21T21:15:14.531+05:00  INFO 10212 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2024-05-21T21:15:14.538+05:00  INFO 10212 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2602 ms
+?[0m?[0;34m2024-05-21T21:15:14.973+05:00  INFO 10212 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2024-05-21T21:15:15.054+05:00  INFO 10212 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+?[0m?[0;34m2024-05-21T21:15:15.361+05:00  WARN 10212 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+?[0m?[0;34m2024-05-21T21:15:15.564+05:00  INFO 10212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2024-05-21T21:15:15.894+05:00  INFO 10212 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:../fileshare_db user=SA
+?[0m?[0;34m2024-05-21T21:15:15.898+05:00  INFO 10212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2024-05-21T21:15:15.948+05:00  INFO 10212 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2024-05-21T21:15:16.746+05:00  INFO 10212 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2024-05-21T21:15:16.758+05:00  INFO 10212 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2024-05-21T21:15:18.369+05:00  WARN 10212 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2024-05-21T21:15:19.339+05:00  INFO 10212 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2024-05-21T21:15:19.460+05:00  INFO 10212 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+?[0m?[0;34m2024-05-21T21:15:19.490+05:00  INFO 10212 --- [    Test worker] fileshare.ApplicationKt                  : Started ApplicationKt in 8.26 seconds (process running for 9.467)
+?[0;34m2024-05-21T21:15:20.035+05:00  INFO 10212 --- [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T21:15:20.036+05:00  INFO 10212 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T21:15:20.040+05:00  INFO 10212 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
 ?[0m?[1;31m
 Start test 2?[0m
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@8d19924
+?[0m?[0;34mfileName = file1.png, fileType = image/png
 ?[1;31m
 Start test 3?[0m
-?[0;34mfileSize = 378, spaceLeft = 200000
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@6504a35b
+?[0m?[0;34mfileName = file.exe, fileType = application/octet-stream
+?[0m?[0;34mfileSize = 32614, spaceLeft = 200000
 ?[1;31m
 Start test 4?[0m
-?[0;34mfileSize = 32614, spaceLeft = 200000
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@66c4f3e1
+?[0m?[0;34mfileName = file.jpg, fileType = text/plain
+?[0m?[0;34mfileSize = 32614, spaceLeft = 200000
 ?[1;31m
 Start test 5?[0m
-?[0;34mfileSize = 32614, spaceLeft = 200000
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@5de6faa
+?[0m?[0;34mfileName = file.jpg, fileType = image/png
+?[0m?[0;34mfileSize = 32614, spaceLeft = 200000
 ?[1;31m
 Start test 6?[0m
-?[0;34mfileSize = 44856, spaceLeft = 200000
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@638151be
 ?[0m?[0;34mfileName = file1.jpg, fileType = image/jpeg
-?[0m?[0;34mFile: 821bfae6-06f9-4e83-a6b0-48f6983514c3 saved at http://localhost:8888/api/v1/download/821bfae6-06f9-4e83-a6b0-48f6983514c3
+?[0m?[0;34mfileSize = 44856, spaceLeft = 200000
+?[0m?[0;34mFile: 63ef9de0-7998-4024-b3a2-db4db25a1cf7 saved at http://localhost:8888/api/v1/download/63ef9de0-7998-4024-b3a2-db4db25a1cf7
 ?[1;31m
 Start test 7?[0m
-?[0;34mfileSize = 32614, spaceLeft = 155144
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@b348b4b
 ?[0m?[0;34mfileName = file1.jpg, fileType = image/jpeg
-?[0m?[0;34mFile: 10c9bf75-a400-4f53-b4ad-ded263bcea20 saved at http://localhost:8888/api/v1/download/10c9bf75-a400-4f53-b4ad-ded263bcea20
 ?[1;31m
 Start test 8?[0m
-?[0;34mfileSize = 32614, spaceLeft = 122530
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@48da246f
 ?[0m?[0;34mfileName = file1.jpg, fileType = image/jpeg
-?[0m?[0;34mFile: 2230cd94-caf6-490b-90a7-e650afe059a5 saved at http://localhost:8888/api/v1/download/2230cd94-caf6-490b-90a7-e650afe059a5
 ?[1;31m
 Start test 9?[0m
-?[0;34mfileSize = 378, spaceLeft = 89916
-?[0m?[0;34mfileName = file.txt, fileType = text/plain
-?[0m?[0;34mFile: f34684d6-74bc-4426-be3a-e309656a213d saved at http://localhost:8888/api/v1/download/f34684d6-74bc-4426-be3a-e309656a213d
 ?[1;31m
 Start test 10?[0m
-?[0;34mfileSize = 41740, spaceLeft = 89538
-?[0m?[0;34mfileName = file.png, fileType = image/png
-?[0m?[0;34mFile: cbba843c-aa15-46dc-b86d-eff4a1508ffe saved at http://localhost:8888/api/v1/download/cbba843c-aa15-46dc-b86d-eff4a1508ffe
+?[0m?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@7619c85d
+?[0m?[0;34mfileName = file1.jpg, fileType = image/jpeg
+?[0m?[0;34mfileSize = 32614, spaceLeft = 155144
+?[0m?[0;34mFile: adaf7541-977c-4a08-b9fc-c9f0b075a189 saved at http://localhost:8888/api/v1/download/adaf7541-977c-4a08-b9fc-c9f0b075a189
 ?[1;31m
 Start test 11?[0m
-?[0m?[0;34mfileSize = 41740, spaceLeft = 47798
-?[0m?[0;34mfileName = file2.png, fileType = image/png
-?[0m?[0;34mFile: 7e9ac6c9-9856-485f-8bae-5e7fbcfea081 saved at http://localhost:8888/api/v1/download/7e9ac6c9-9856-485f-8bae-5e7fbcfea081
+?[0m?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@4fdb8eb5
+?[0m?[0;34mfileName = file.txt, fileType = text/plain
+?[0m?[0;34mfileSize = 378, spaceLeft = 122530
+?[0m?[0;34mFile: 564c7731-5417-42e0-afe4-3981e95f1bfe saved at http://localhost:8888/api/v1/download/564c7731-5417-42e0-afe4-3981e95f1bfe
 ?[1;31m
 Start test 12?[0m
+?[0m?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@48b1af58
+?[0m?[0;34mfileName = file.png, fileType = image/png
+?[0m?[0;34mfileSize = 41740, spaceLeft = 122152
+?[0m?[0;34mFile: 2b72212a-fc95-4829-9cf5-1901eb4d0cd9 saved at http://localhost:8888/api/v1/download/2b72212a-fc95-4829-9cf5-1901eb4d0cd9
 ?[1;31m
 Start test 13?[0m
+?[0m?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@441bc987
+?[0m?[0;34mfileName = file33.jpg, fileType = image/jpeg
+?[0m?[0;34mfileSize = 41953, spaceLeft = 80412
+?[0m?[0;34mFile: 0fed3bbe-c17f-47d4-a510-72b5a8c6b4ca saved at http://localhost:8888/api/v1/download/0fed3bbe-c17f-47d4-a510-72b5a8c6b4ca
 ?[1;31m
 Start test 14?[0m
-?[0;34m2024-05-21T19:24:51.704+05:00  INFO 8268 --- [       Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-?[0m?[0;34m2024-05-21T19:24:51.709+05:00  INFO 8268 --- [       Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
-?[0m?[0;34m2024-05-21T19:24:51.722+05:00  INFO 8268 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2024-05-21T19:24:51.727+05:00  INFO 8268 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-?[0m?[0;34m2024-05-21T19:24:51.814+05:00  INFO 8268 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+?[1;31m
+Start test 15?[0m
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@3f36540
+?[0m?[0;34mfileName = file44.png, fileType = image/png
+?[1;31m
+Start test 16?[0m
+?[0m?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@62066d85
+?[0m?[0;34mfileName = file55.jpg, fileType = image/jpeg
+?[1;31m
+Start test 17?[0m
+?[1;31m
+Start test 18?[0m
+?[0;34m2024-05-21T21:15:21.743+05:00  INFO 10212 --- [       Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+?[0m?[0;34m2024-05-21T21:15:21.746+05:00  INFO 10212 --- [       Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T21:15:21.766+05:00  INFO 10212 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2024-05-21T21:15:21.771+05:00  INFO 10212 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+?[0m?[0;34m2024-05-21T21:15:22.049+05:00  INFO 10212 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 ?[0;34m
 ?[0m?[0;34m  .   ____          _            __ _ _
 ?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -184,36 +210,38 @@ Start test 14?[0m
 ?[0m?[0;34m =========|_|==============|___/=/_/_/_/
 ?[0m?[0;34m :: Spring Boot ::                (v3.0.2)
 ?[0m?[0;34m
-?[0m?[0;34m2024-05-21T19:25:02.188+05:00  INFO 8268 --- [    Test worker] fileshare.ApplicationKt                  : Starting ApplicationKt using Java 17.0.5 with PID 8268 (started by User in D:\JetBrainsWork\File Share (Kotlin)\File Share (Kotlin)\task)
-?[0m?[0;34m2024-05-21T19:25:02.188+05:00  INFO 8268 --- [    Test worker] fileshare.ApplicationKt                  : No active profile set, falling back to 1 default profile: &quot;default&quot;
-?[0m?[0;34m2024-05-21T19:25:02.657+05:00  INFO 8268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-?[0m?[0;34m2024-05-21T19:25:02.668+05:00  INFO 8268 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interfaces.
-?[0m?[0;34m2024-05-21T19:25:02.791+05:00  INFO 8268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
-?[0m?[0;34m2024-05-21T19:25:02.794+05:00  INFO 8268 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-?[0m?[0;34m2024-05-21T19:25:02.795+05:00  INFO 8268 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
-?[0m?[0;34m2024-05-21T19:25:02.833+05:00  INFO 8268 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-?[0m?[0;34m2024-05-21T19:25:02.833+05:00  INFO 8268 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 637 ms
-?[0m?[0;34m2024-05-21T19:25:02.949+05:00  INFO 8268 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-?[0m?[0;34m2024-05-21T19:25:02.959+05:00  WARN 8268 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-?[0m?[0;34m2024-05-21T19:25:02.966+05:00  INFO 8268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-?[0m?[0;34m2024-05-21T19:25:02.983+05:00  INFO 8268 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:../fileshare_db user=SA
-?[0m?[0;34m2024-05-21T19:25:02.984+05:00  INFO 8268 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-?[0m?[0;34m2024-05-21T19:25:02.986+05:00  INFO 8268 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-?[0m?[0;34m2024-05-21T19:25:03.012+05:00  INFO 8268 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-?[0m?[0;34m2024-05-21T19:25:03.012+05:00  INFO 8268 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-?[0m?[0;34m2024-05-21T19:25:03.086+05:00  WARN 8268 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-?[0m?[0;34m2024-05-21T19:25:03.328+05:00  INFO 8268 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
-?[0m?[0;34m2024-05-21T19:25:03.360+05:00  INFO 8268 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
-?[0m?[0;34m2024-05-21T19:25:03.369+05:00  INFO 8268 --- [    Test worker] fileshare.ApplicationKt                  : Started ApplicationKt in 1.239 seconds (process running for 22.171)
+?[0m?[0;34m2024-05-21T21:15:32.179+05:00  INFO 10212 --- [    Test worker] fileshare.ApplicationKt                  : Starting ApplicationKt using Java 17.0.5 with PID 10212 (started by User in D:\JetBrainsWork\File Share (Kotlin)\File Share (Kotlin)\task)
+?[0m?[0;34m2024-05-21T21:15:32.180+05:00  INFO 10212 --- [    Test worker] fileshare.ApplicationKt                  : No active profile set, falling back to 1 default profile: &quot;default&quot;
+?[0m?[0;34m2024-05-21T21:15:32.651+05:00  INFO 10212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2024-05-21T21:15:32.662+05:00  INFO 10212 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2024-05-21T21:15:32.785+05:00  INFO 10212 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+?[0m?[0;34m2024-05-21T21:15:32.788+05:00  INFO 10212 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2024-05-21T21:15:32.789+05:00  INFO 10212 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+?[0m?[0;34m2024-05-21T21:15:32.826+05:00  INFO 10212 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2024-05-21T21:15:32.826+05:00  INFO 10212 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 641 ms
+?[0m?[0;34m2024-05-21T21:15:32.936+05:00  INFO 10212 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2024-05-21T21:15:32.943+05:00  WARN 10212 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+?[0m?[0;34m2024-05-21T21:15:32.951+05:00  INFO 10212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+?[0m?[0;34m2024-05-21T21:15:32.969+05:00  INFO 10212 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:../fileshare_db user=SA
+?[0m?[0;34m2024-05-21T21:15:32.970+05:00  INFO 10212 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+?[0m?[0;34m2024-05-21T21:15:32.970+05:00  INFO 10212 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2024-05-21T21:15:32.998+05:00  INFO 10212 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2024-05-21T21:15:33.000+05:00  INFO 10212 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2024-05-21T21:15:33.084+05:00  WARN 10212 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2024-05-21T21:15:33.306+05:00  INFO 10212 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2024-05-21T21:15:33.334+05:00  INFO 10212 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+?[0m?[0;34m2024-05-21T21:15:33.348+05:00  INFO 10212 --- [    Test worker] fileshare.ApplicationKt                  : Started ApplicationKt in 1.205 seconds (process running for 23.325)
 ?[0m?[1;31m
-Start test 15?[0m
-?[0;34m2024-05-21T19:25:03.378+05:00  INFO 8268 --- [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-?[0m?[0;34m2024-05-21T19:25:03.378+05:00  INFO 8268 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-?[0m?[0;34m2024-05-21T19:25:03.381+05:00  INFO 8268 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+Start test 19?[0m
+?[0;34m2024-05-21T21:15:33.357+05:00  INFO 10212 --- [nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T21:15:33.357+05:00  INFO 10212 --- [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T21:15:33.360+05:00  INFO 10212 --- [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
 ?[1;31m
-Start test 16?[0m
+Start test 20?[0m
+?[0;34mfile = org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@11c09a52
+?[0m?[0;34mfileName = file.jpg, fileType = image/jpeg
 ?[1;31m
-Start test 17?[0m
+Start test 21?[0m
 </pre>
 </span>
 </div>
@@ -225,7 +253,7 @@ Start test 17?[0m
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6</a> at May 21, 2024, 7:25:04 PM</p>
+<a href="http://www.gradle.org">Gradle 7.6</a> at May 21, 2024, 9:15:34 PM</p>
 </div>
 </div>
 </body>

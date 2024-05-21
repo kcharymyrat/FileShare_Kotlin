@@ -13,5 +13,8 @@ data class UploadedFile(
     var fileName: String? = null,
 
     @Column(name = "file_type")
-    var fileType: String? = null
+    var fileType: String? = null,
+
+    @Column(name = "hash_code")
+    var hashCode: String? = null
 )

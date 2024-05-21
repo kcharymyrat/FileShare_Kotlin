@@ -12,9 +12,6 @@ files:
   - name: build.gradle
     visible: true
     learner_created: false
-  - name: src/fileshare/services/DirService.kt
-    visible: true
-    learner_created: false
   - name: src/fileshare/models/DirInfoDTO.kt
     visible: true
     learner_created: false
@@ -54,6 +51,34 @@ files:
   - name: test/FileShareTest.java
     visible: false
     learner_created: false
+  - name: src/fileshare/models/UploadedFile.kt
+    visible: true
+    learner_created: true
+  - name: src/fileshare/services/FileShareService.kt
+    visible: true
+    learner_created: true
+  - name: src/fileshare/repositories/UploadedFileRepository.kt
+    visible: true
+    learner_created: true
+  - name: 63ef9de0-7998-4024-b3a2-db4db25a1cf7
+    visible: true
+    learner_created: true
+  - name: 564c7731-5417-42e0-afe4-3981e95f1bfe
+    visible: true
+    learner_created: true
+  - name: 0fed3bbe-c17f-47d4-a510-72b5a8c6b4ca
+    visible: true
+    learner_created: true
+  - name: 2b72212a-fc95-4829-9cf5-1901eb4d0cd9
+    visible: true
+    learner_created: true
+  - name: adaf7541-977c-4a08-b9fc-c9f0b075a189
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/415/stages/2429/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Well done! You've finished the project. Select a new project on <a href="https://hyperskill.org/projects">Hyperskill</a>
+    to continue learning.
+  time: "Tue, 21 May 2024 16:15:34 UTC"
 record: -1

@@ -15,6 +15,7 @@ import java.nio.charset.CharsetDecoder
 import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
+import java.security.MessageDigest
 import java.util.*
 import kotlin.io.path.*
 
@@ -114,10 +115,35 @@ class FileShareService @Autowired constructor(
         }
     }
 
+    fun generateHashCode(fileBytes: ByteArray): String {
+        val md = MessageDigest.getInstance("SHA-256")
+        val digest = md.digest(fileBytes)
+        return digest.fold("") { str, it -> str + "%02x".format(it) }
+    }
+
     fun saveFileToUploadsDir(file: MultipartFile): ResponseEntity<Any> {
+        println("file = $file")
         // Check if file is empty
         if (file.isEmpty) {
             return ResponseEntity.badRequest().body("File is empty")
+        }
+
+        // Get file name and its content type
+        val fileName = file.originalFilename ?: return ResponseEntity.badRequest().body("File name is empty")
+        val fileType = file.contentType ?: return ResponseEntity.badRequest().body("File content type is empty")
+
+        println("fileName = $fileName, fileType = $fileType")
+
+        // Check if the file with same content already exists
+        val fileHashCode = generateHashCode(fileBytes = file.bytes)
+        // Look up the db if the entity with this hash exist - if exist just change the name and save
+        val optionalUploadedFile = uploadedFileRepository.findByHashCode(fileHashCode)
+        if (optionalUploadedFile.isPresent) {
+            val uploadedFile = optionalUploadedFile.get()
+            uploadedFile.fileName = fileName
+            saveToDb(uploadedFile)
+            val location = "http://localhost:$serverPort/api/v1/download/${uploadedFile.id}"
+            return ResponseEntity.created(URI.create(location)).body("File: $fileName saved")
         }
 
         // Total Space left
@@ -142,14 +168,8 @@ class FileShareService @Autowired constructor(
             return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE).build()
         }
 
-        // Get file name and its content type
-        val fileName = file.originalFilename ?: return ResponseEntity.badRequest().body("File name is empty")
-        val fileType = file.contentType ?: return ResponseEntity.badRequest().body("File content type is empty")
-
-        println("fileName = $fileName, fileType = $fileType")
-
-        // Save the file info into db
-        val toBeUploadedFile = UploadedFile(fileName = fileName, fileType = fileType)
+        // If no such file then save the file info into db
+        val toBeUploadedFile = UploadedFile(fileName = fileName, fileType = fileType, hashCode = fileHashCode)
         val uploadedFileEntity = uploadedFileRepository.save(toBeUploadedFile)
 
         // New name of the file will be uuid (id of the saved UploadedFile)

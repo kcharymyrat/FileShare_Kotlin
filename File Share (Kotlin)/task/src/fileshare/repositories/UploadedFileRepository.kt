@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository
 import java.util.*
 
 @Repository
-interface UploadedFileRepository : JpaRepository<UploadedFile, UUID>
+interface UploadedFileRepository : JpaRepository<UploadedFile, UUID> {
+    fun findByHashCode(hashCode: String): Optional<UploadedFile>
+}

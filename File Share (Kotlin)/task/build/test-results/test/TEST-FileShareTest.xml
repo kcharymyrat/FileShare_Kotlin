@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="FileShareTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-21T12:43:22" hostname="WIN-PK97IO7J39D" time="21.352">
+  <properties/>
+  <testcase name="start" classname="FileShareTest" time="21.352"/>
+  <system-out><![CDATA[?[1;31m
+Start test 1?[0m
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v3.0.2)
+?[0m?[0;34m
+?[0m?[0;34m2024-05-21T17:43:23.449+05:00  INFO 11344 --- [    Test worker] fileshare.ApplicationKt                  : Starting ApplicationKt using Java 17.0.5 with PID 11344 (started by User in D:\JetBrainsWork\File Share (Kotlin)\File Share (Kotlin)\task)
+?[0m?[0;34m2024-05-21T17:43:23.455+05:00  INFO 11344 --- [    Test worker] fileshare.ApplicationKt                  : No active profile set, falling back to 1 default profile: "default"
+?[0m?[0;34m2024-05-21T17:43:25.031+05:00  INFO 11344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2024-05-21T17:43:25.098+05:00  INFO 11344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2024-05-21T17:43:25.882+05:00  INFO 11344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+?[0m?[0;34m2024-05-21T17:43:25.900+05:00  INFO 11344 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2024-05-21T17:43:25.901+05:00  INFO 11344 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+?[0m?[0;34m2024-05-21T17:43:26.024+05:00  INFO 11344 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2024-05-21T17:43:26.028+05:00  INFO 11344 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2483 ms
+?[0m?[0;34m2024-05-21T17:43:26.425+05:00  INFO 11344 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2024-05-21T17:43:26.515+05:00  INFO 11344 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+?[0m?[0;34m2024-05-21T17:43:26.799+05:00  WARN 11344 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+?[0m?[0;34m2024-05-21T17:43:26.992+05:00  INFO 11344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+?[0m?[0;34m2024-05-21T17:43:27.271+05:00  INFO 11344 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:file:../fileshare_db user=SA
+?[0m?[0;34m2024-05-21T17:43:27.274+05:00  INFO 11344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+?[0m?[0;34m2024-05-21T17:43:27.322+05:00  INFO 11344 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2024-05-21T17:43:28.190+05:00  INFO 11344 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2024-05-21T17:43:28.203+05:00  INFO 11344 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2024-05-21T17:43:29.267+05:00  WARN 11344 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2024-05-21T17:43:30.076+05:00  INFO 11344 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2024-05-21T17:43:30.204+05:00  INFO 11344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+?[0m?[0;34m2024-05-21T17:43:30.227+05:00  INFO 11344 --- [    Test worker] fileshare.ApplicationKt                  : Started ApplicationKt in 7.392 seconds (process running for 8.592)
+?[0;34m2024-05-21T17:43:30.697+05:00  INFO 11344 --- [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T17:43:30.698+05:00  INFO 11344 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T17:43:30.701+05:00  INFO 11344 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+?[0m?[1;31m
+Start test 2?[0m
+?[0;34mFile: 702d00c0-2c93-45ba-af26-9595b72eb60d saved at http://localhost:8888/api/v1/download/702d00c0-2c93-45ba-af26-9595b72eb60d
+?[1;31m
+Start test 3?[0m
+?[0;34mFile: 2ed75120-249e-4529-9767-34adcbaa6765 saved at http://localhost:8888/api/v1/download/2ed75120-249e-4529-9767-34adcbaa6765
+?[1;31m
+Start test 4?[0m
+?[0;34mFile: c9c51cd8-9a85-4d4a-aea4-a41cd4555015 saved at http://localhost:8888/api/v1/download/c9c51cd8-9a85-4d4a-aea4-a41cd4555015
+?[1;31m
+Start test 5?[0m
+?[0;34mFile: 7f6f4253-9b45-4d5c-8582-e727ddf7d99a saved at http://localhost:8888/api/v1/download/7f6f4253-9b45-4d5c-8582-e727ddf7d99a
+?[1;31m
+Start test 6?[0m
+?[1;31m
+Start test 7?[0m
+?[1;31m
+Start test 8?[0m
+?[0;34m2024-05-21T17:43:31.959+05:00  INFO 11344 --- [       Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+?[0m?[0;34m2024-05-21T17:43:31.962+05:00  INFO 11344 --- [       Thread-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Destroying Spring FrameworkServlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T17:43:31.974+05:00  INFO 11344 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2024-05-21T17:43:31.978+05:00  INFO 11344 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+?[0m?[0;34m2024-05-21T17:43:32.071+05:00  INFO 11344 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+?[0;34m
+?[0m?[0;34m  .   ____          _            __ _ _
+?[0m?[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+?[0m?[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+?[0m?[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+?[0m?[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+?[0m?[0;34m =========|_|==============|___/=/_/_/_/
+?[0m?[0;34m :: Spring Boot ::                (v3.0.2)
+?[0m?[0;34m
+?[0m?[0;34m2024-05-21T17:43:42.438+05:00  INFO 11344 --- [    Test worker] fileshare.ApplicationKt                  : Starting ApplicationKt using Java 17.0.5 with PID 11344 (started by User in D:\JetBrainsWork\File Share (Kotlin)\File Share (Kotlin)\task)
+?[0m?[0;34m2024-05-21T17:43:42.439+05:00  INFO 11344 --- [    Test worker] fileshare.ApplicationKt                  : No active profile set, falling back to 1 default profile: "default"
+?[0m?[0;34m2024-05-21T17:43:42.928+05:00  INFO 11344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+?[0m?[0;34m2024-05-21T17:43:42.939+05:00  INFO 11344 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 1 JPA repository interfaces.
+?[0m?[0;34m2024-05-21T17:43:43.079+05:00  INFO 11344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+?[0m?[0;34m2024-05-21T17:43:43.083+05:00  INFO 11344 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+?[0m?[0;34m2024-05-21T17:43:43.085+05:00  INFO 11344 --- [    Test worker] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.5]
+?[0m?[0;34m2024-05-21T17:43:43.130+05:00  INFO 11344 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+?[0m?[0;34m2024-05-21T17:43:43.132+05:00  INFO 11344 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 682 ms
+?[0m?[0;34m2024-05-21T17:43:43.267+05:00  INFO 11344 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+?[0m?[0;34m2024-05-21T17:43:43.278+05:00  WARN 11344 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+?[0m?[0;34m2024-05-21T17:43:43.287+05:00  INFO 11344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+?[0m?[0;34m2024-05-21T17:43:43.305+05:00  INFO 11344 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:file:../fileshare_db user=SA
+?[0m?[0;34m2024-05-21T17:43:43.306+05:00  INFO 11344 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+?[0m?[0;34m2024-05-21T17:43:43.307+05:00  INFO 11344 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+?[0m?[0;34m2024-05-21T17:43:43.338+05:00  INFO 11344 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+?[0m?[0;34m2024-05-21T17:43:43.339+05:00  INFO 11344 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+?[0m?[0;34m2024-05-21T17:43:43.418+05:00  WARN 11344 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+?[0m?[0;34m2024-05-21T17:43:43.703+05:00  INFO 11344 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+?[0m?[0;34m2024-05-21T17:43:43.742+05:00  INFO 11344 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+?[0m?[0;34m2024-05-21T17:43:43.757+05:00  INFO 11344 --- [    Test worker] fileshare.ApplicationKt                  : Started ApplicationKt in 1.374 seconds (process running for 22.12)
+?[0m?[1;31m
+Start test 9?[0m
+?[0;34m2024-05-21T17:43:43.767+05:00  INFO 11344 --- [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T17:43:43.767+05:00  INFO 11344 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+?[0m?[0;34m2024-05-21T17:43:43.770+05:00  INFO 11344 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

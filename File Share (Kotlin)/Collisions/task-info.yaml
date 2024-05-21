@@ -1,0 +1,64 @@
+type: edu
+files:
+  - name: src/fileshare/web/UploadRestController.kt
+    visible: true
+    learner_created: false
+  - name: src/fileshare/Application.kt
+    visible: true
+    learner_created: false
+  - name: src/resources/application.properties
+    visible: true
+    learner_created: false
+  - name: build.gradle
+    visible: true
+    learner_created: false
+  - name: src/fileshare/services/FileShareService.kt
+    visible: true
+    learner_created: false
+  - name: src/fileshare/models/DirInfoDTO.kt
+    visible: true
+    learner_created: false
+  - name: test/files/file 1.jpg
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: test/files/file2.jpg
+    visible: false
+    is_binary: true
+    learner_created: false
+  - name: test/files/file3.txt
+    visible: false
+    learner_created: false
+  - name: test/FileClient.java
+    visible: false
+    learner_created: false
+  - name: test/FileData.java
+    visible: false
+    learner_created: false
+  - name: test/FileShareTest.java
+    visible: false
+    learner_created: false
+  - name: src/fileshare/models/UploadedFile.kt
+    visible: true
+    learner_created: true
+  - name: src/fileshare/repositories/UploadedFileRepository.kt
+    visible: true
+    learner_created: true
+  - name: 702d00c0-2c93-45ba-af26-9595b72eb60d
+    visible: true
+    learner_created: true
+  - name: 2ed75120-249e-4529-9767-34adcbaa6765
+    visible: true
+    learner_created: true
+  - name: 7f6f4253-9b45-4d5c-8582-e727ddf7d99a
+    visible: true
+    learner_created: true
+  - name: c9c51cd8-9a85-4d4a-aea4-a41cd4555015
+    visible: true
+    learner_created: true
+feedback_link: https://hyperskill.org/projects/415/stages/2427/implement#comment
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 21 May 2024 12:43:44 UTC"
+record: 2

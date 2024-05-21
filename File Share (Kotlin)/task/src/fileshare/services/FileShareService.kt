@@ -10,8 +10,9 @@ import org.springframework.http.*
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
 import java.net.URI
-import java.net.URLDecoder
-import java.net.URLEncoder
+import java.nio.ByteBuffer
+import java.nio.charset.CharsetDecoder
+import java.nio.charset.StandardCharsets
 import java.nio.file.Files
 import java.nio.file.Path
 import java.util.*
@@ -22,6 +23,10 @@ import kotlin.io.path.*
 class FileShareService @Autowired constructor(
     private val uploadedFileRepository: UploadedFileRepository
 ) {
+
+    private var totalAllowedSpace: Long = 200_000  // 200KB
+    private val maxFileSize: Long = 50_000 // 50KB
+    private val allowedExtensions = listOf("text/plain", "image/jpeg", "image/png")
 
     @Value("\${uploads.dir}")
     private lateinit var uploadsDirPath: String
@@ -53,11 +58,60 @@ class FileShareService @Autowired constructor(
         return uploadedFileRepository.findById(id).orElse(null)
     }
 
+    fun getRemainingSpace(): Long {
+        val uploadsDir: Path = Path(uploadsDirPath)
+        val totalBytes: Long = uploadsDir.toFile().listFiles()?.sumOf { it.length() } ?: 0
+        return totalAllowedSpace - totalBytes
+    }
+
     fun getUploadsDirInfo(): ResponseEntity<Any> {
         val uploadsDir: Path = Path(uploadsDirPath)
         val totalFiles = uploadsDir.toFile().listFiles()?.size ?: 0
         val totalBytes = uploadsDir.toFile().listFiles()?.sumOf { it.length() } ?: 0
         return ResponseEntity.ok(DirInfoDTO(totalFiles = totalFiles, totalBytes = totalBytes))
+    }
+
+    fun isPng(fileBytes: ByteArray): Boolean {
+        val pngSignature = byteArrayOf(
+            0x89.toByte(), 0x50.toByte(), 0x4E.toByte(), 0x47.toByte(),
+            0x0D.toByte(), 0x0A.toByte(), 0x1A.toByte(), 0x0A.toByte()
+        )
+        return fileBytes.startsWith(pngSignature)
+    }
+
+    fun isJpg(fileBytes: ByteArray): Boolean {
+        val jpgStart = byteArrayOf(0xFF.toByte(), 0xD8.toByte())
+        val jpgEnd = byteArrayOf(0xFF.toByte(), 0xD9.toByte())
+        return fileBytes.startsWith(jpgStart) && fileBytes.endsWith(jpgEnd)
+    }
+
+    fun isUTF8(fileBytes: ByteArray): Boolean {
+        try {
+            val utf8Decoder: CharsetDecoder = StandardCharsets.UTF_8.newDecoder()
+            utf8Decoder.reset()
+            utf8Decoder.decode(ByteBuffer.wrap(fileBytes))
+            return true
+        } catch (e: CharacterCodingException) {
+            return false
+        }
+    }
+
+
+    fun isFileTypeValid(file: MultipartFile): Boolean {
+        // First check extensions
+        val fileType = file.contentType ?: return false
+        if (fileType !in allowedExtensions) {
+            return false
+        }
+
+        // Check the bytes not
+        val fileBytes = file.bytes
+        return when (fileType) {
+            "image/png" -> isPng(fileBytes)
+            "image/jpeg" -> isJpg(fileBytes)
+            "text/plain" -> isUTF8(fileBytes)
+            else -> false
+        }
     }
 
     fun saveFileToUploadsDir(file: MultipartFile): ResponseEntity<Any> {
@@ -66,9 +120,33 @@ class FileShareService @Autowired constructor(
             return ResponseEntity.badRequest().body("File is empty")
         }
 
+        // Total Space left
+        val spaceLeft = getRemainingSpace()
+
+        // Get file size
+        val fileSize = file.size
+
+        // Compare if enough space is left to store
+        if (fileSize > spaceLeft) {
+            return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE).build()
+        }
+
+        // Compare if file size is more than allowed max file size
+        if (fileSize > maxFileSize) {
+            return ResponseEntity.status(HttpStatus.PAYLOAD_TOO_LARGE).build()
+        }
+        println("fileSize = $fileSize, spaceLeft = $spaceLeft")
+
+        // Compare if file type is valid
+        if (!isFileTypeValid(file)) {
+            return ResponseEntity.status(HttpStatus.UNSUPPORTED_MEDIA_TYPE).build()
+        }
+
         // Get file name and its content type
         val fileName = file.originalFilename ?: return ResponseEntity.badRequest().body("File name is empty")
         val fileType = file.contentType ?: return ResponseEntity.badRequest().body("File content type is empty")
+
+        println("fileName = $fileName, fileType = $fileType")
 
         // Save the file info into db
         val toBeUploadedFile = UploadedFile(fileName = fileName, fileType = fileType)
@@ -84,6 +162,7 @@ class FileShareService @Autowired constructor(
             file.transferTo(filePath)
             val location = "http://localhost:$serverPort/api/v1/download/$encodedFileName"
             println("File: $encodedFileName saved at $location")
+            // Reduce space left
             return ResponseEntity.created(URI.create(location)).body("File: $fileName saved")
         } catch (e: Exception) {
             e.printStackTrace()
@@ -125,6 +204,17 @@ class FileShareService @Autowired constructor(
         } catch (e: Exception) {
             ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null)
         }
+    }
+
+
+    fun ByteArray.startsWith(prefix: ByteArray): Boolean {
+        if (this.size < prefix.size) return false
+        return this.take(prefix.size).toByteArray().contentEquals(prefix)
+    }
+
+    fun ByteArray.endsWith(suffix: ByteArray): Boolean {
+        if (this.size < suffix.size) return false
+        return this.takeLast(suffix.size).toByteArray().contentEquals(suffix)
     }
 
 }

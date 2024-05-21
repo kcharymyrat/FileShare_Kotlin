@@ -12,9 +12,6 @@ files:
   - name: build.gradle
     visible: true
     learner_created: false
-  - name: src/fileshare/services/DirService.kt
-    visible: true
-    learner_created: false
   - name: src/fileshare/models/DirInfoDTO.kt
     visible: true
     learner_created: false
@@ -46,6 +43,36 @@ files:
   - name: test/FileShareTest.java
     visible: false
     learner_created: false
+  - name: src/fileshare/models/UploadedFile.kt
+    visible: true
+    learner_created: true
+  - name: src/fileshare/services/FileShareService.kt
+    visible: true
+    learner_created: true
+  - name: src/fileshare/repositories/UploadedFileRepository.kt
+    visible: true
+    learner_created: true
+  - name: f34684d6-74bc-4426-be3a-e309656a213d
+    visible: true
+    learner_created: true
+  - name: 10c9bf75-a400-4f53-b4ad-ded263bcea20
+    visible: true
+    learner_created: true
+  - name: 821bfae6-06f9-4e83-a6b0-48f6983514c3
+    visible: true
+    learner_created: true
+  - name: cbba843c-aa15-46dc-b86d-eff4a1508ffe
+    visible: true
+    learner_created: true
+  - name: 2230cd94-caf6-490b-90a7-e650afe059a5
+    visible: true
+    learner_created: true
+  - name: 7e9ac6c9-9856-485f-8bae-5e7fbcfea081
+    visible: true
+    learner_created: true
 feedback_link: https://hyperskill.org/projects/415/stages/2428/implement#comment
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Tue, 21 May 2024 14:25:04 UTC"
 record: 4
